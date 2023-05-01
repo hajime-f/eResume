@@ -28,10 +28,9 @@ env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['220.211.246.29']
 
 # Application definition
 
@@ -80,12 +79,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': env('ENGINE')
-        'NAME': env('NAME')
-        'USER': env('USER')
-        'PASSWORD': env('PASSWORD')
-        'PORT': env('PORT')
-        'HOST': env('HOST')
+        'ENGINE': env('ENGINE'),
+        'NAME': env('NAME'),
+        'USER': env('USER'),
+        'PASSWORD': env('PASSWORD'),
+        'PORT': env('PORT'),
+        'HOST': env('HOST'),
     }
 }
 
