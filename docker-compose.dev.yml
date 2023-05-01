@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  python:
+    build:
+      dockerfile: Dockerfile
+    command: python3 manage.py runserver 0.0.0.0:8000
+    restart: unless-stopped
+    container_name: Django
+    volumes:
+      - ./src:/code
+      - ./static:/static
+    ports:
+      - "8000:8000"
